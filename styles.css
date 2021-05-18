@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(46, 46, 46);
+    color: white;
+    justify-content: center;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    border: 1px dashed pink;
+}
+
+#mainContainer {
+    display: flex;
+    justify-content: center;
+    border: 1px dashed white;
+    height: 100%;
+    width: 100%;
+}
+
+#gameWindow {
+    display: grid;
+    border: 1px dashed white;
+    height: 600px;
+    width: 700px;
+
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+}
+
+.boardCell {
+    border: 1px dashed white;
+    height: 200px;
+    width: 233px;
+}
