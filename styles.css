@@ -20,7 +20,7 @@ body {
 
 #gameWindow {
     display: grid;
-    border: 1px dashed white;
+    /*border: 1px dashed white;*/
     height: 600px;
     width: 700px;
 
@@ -30,6 +30,35 @@ body {
 
 .boardCell {
     border: 1px dashed white;
-    height: 200px;
-    width: 233px;
+    width: 230px;
+    height: 198px;
+}
+
+.boardCell:hover,
+.boardCell:focus {
+    background-color:rgb(100, 100, 100);
+}
+
+.playerCharX {
+    background-image:url("playerCharX.png");
+    background-repeat: no-repeat;
+    background-size: 225px 193px;
+}
+
+.playerCharO {
+    background-image:url("playerCharO.png");
+    background-repeat: no-repeat;
+    background-size: 225px 193px;
+}
+
+#fillCellBTN {
+    height: 50px;
+    width: 100px;
+    border: 1px solid red;
+}
+
+.setFirstPlayerBTN {
+    height: 50px;
+    width: 100px;
+    border: 1px solid red;
 }
