@@ -28,6 +28,15 @@ body {
     grid-template-columns: auto auto auto;
 }
 
+
+#gameContainer {
+    display: grid;
+    height: 600px;
+    width: 700px;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+}
+
 .boardCell {
     border: 1px dashed white;
     width: 230px;
