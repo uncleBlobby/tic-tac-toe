@@ -59,11 +59,14 @@ function checkWinners(same) {
     || ((currentGameState.cell3 != "empty") && (currentGameState.cell3 == same) && (currentGameState.cell5 == same) && (currentGameState.cell8 == same))
     || ((currentGameState.cell0 != "empty") && (currentGameState.cell0 == same) && (currentGameState.cell4 == same) && (currentGameState.cell8 == same))
     || ((currentGameState.cell2 != "empty") && (currentGameState.cell2 == same) && (currentGameState.cell4 == same) && (currentGameState.cell6 == same))   
-    ){
-    gameWinner = same;
-    console.log(gameWinner);
-    stopGame(gameWinner);
-}}
+    )
+        {
+            gameWinner = same;
+            console.log(gameWinner);
+            stopGame(gameWinner);
+        }
+    
+    }
 
 //stops game with alert when a winner is called;
 function stopGame(gameWinner) {
@@ -99,6 +102,9 @@ function toggleCell(boardCell, playerChar){
     }
 
 }
+
+//this fillRandomCell() function is current ly responsible for the UI move // eventually won't be random, but instead weighted toward advantageous situations
+
 
 function fillRandomCell(){
 
