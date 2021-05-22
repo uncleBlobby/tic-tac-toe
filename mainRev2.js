@@ -4,21 +4,35 @@ const Player = (name) => {
         //function to read the status of the current board
     };
 
-    const makePlay = (e) => {
+    const marker = (name) => {
+        if(name != "enemy"){
+            let playerMarker = "X";
+        }
+        if(name == "enemy"){
+            let enemyMarker = "O";
+        }
+    }
+
+    const makePlay = (name, e) => {
         //function to make next play based on the status of the current board
         //player choice is the event target div
         //for player it is clicked, for AI it is ????
+        if(name != "enemy"){
+            //if current player is not enemy, current player is user
+
+        }
+
 
     };
-    return {sayName};
+    return {sayName, checkBoard, marker, makePlay};
 };
 
 const player = Player("player");
 const enemy = Player("enemy");
 
+console.log(enemy.marker(enemy));
+console.log(player.marker(player));
 
-player.sayName();
-enemy.sayName();
 
 const gameBoard = (() => {
     const gridCells = [
@@ -33,11 +47,18 @@ const gameBoard = (() => {
     let enemyOwned =    [
                             null
                         ];
+
+    let currentBoard =  [
+                        "empty", "empty", "empty",
+                        "empty", "empty", "empty",
+                        "empty", "empty", "empty",
+                        ];
+
     let acceptPlayerMoveAt = () => {
         //function to accept player move (makePlay)
     }
     return {
-        gridCells, playerOwned, enemyOwned, acceptPlayerMoveAt
+        gridCells, playerOwned, enemyOwned, currentBoard, acceptPlayerMoveAt
     };
 })();
 
@@ -67,9 +88,11 @@ const displayController = ((gameBoard) => {
     return {gameContainer, drawGameField};
 })();
 
+/*
 console.log(gameBoard.gridCells);
 
 console.log(gameBoard.playerOwned);
 console.log(gameBoard.enemyOwned);
+*/
 
 displayController.drawGameField();
